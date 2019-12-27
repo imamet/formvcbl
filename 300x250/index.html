@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>300x250</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        @font-face {
+            font-family: "Delivery Note DEMO";
+            src: url(font/Delivery-Note-DEMO.tff);
+        }
+        
+        body {
+            width: 300px;
+            font-size: 13px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        /* back up */
+        /* ::-webkit-scrollbar {
+            width: 20px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            box-shadow: inset 15px -1px 5px transparent;
+            border-radius: 10px;
+            margin: 0 50px;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: transparent;
+            border-right: 4px transparent solid;
+            background-clip: padding-box;
+        } */
+        
+        .bg img {
+            width: 100%;
+        }
+        
+        .canvas {
+            background: #20467d;
+            color: #fff;
+            position: relative;
+        }
+        
+        #scrollPane::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        #scrollPane::-webkit-scrollbar-track {
+            box-shadow: inset 15px -1px 5px #f8fbff;
+            border-radius: 10px;
+        }
+        
+        #scrollPane::-webkit-scrollbar-thumb {
+            background: #56edfe;
+        }
+        
+        #scrollPane::-webkit-scrollbar-thumb:hover {
+            background: #000000;
+            border-right: 4px white solid;
+            background-clip: padding-box;
+        }
+        
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 7px 20px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 13px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        
+        input::placeholder {
+            color: #929fb2;
+        }
+        
+        input[type=submit] {
+            width: 150px;
+            background-color: #ff3171;
+            color: black;
+            padding: 3px 20px;
+            border: none;
+            font-size: 1.5em;
+            left: 0;
+            right: 0;
+            margin-left: 44px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 13px;
+            cursor: pointer;
+            font-family: "Delivery Note DEMO";
+            letter-spacing: 2px;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #ff3171;
+        }
+        
+        .content {
+            padding: 20px 20px 20px 20px;
+            margin-top: -82px;
+        }
+        
+        .content p {
+            padding-bottom: 12px;
+        }
+        
+        .content p:first {
+            font-size: 1em;
+            color: #56edfe;
+        }
+        
+        .syarat {
+            background: #547bb4;
+            border-radius: 10px;
+            padding: 10px;
+            color: #fff;
+            line-height: 1.3;
+        }
+        
+        .canvas__scroll {
+            position: sticky;
+            bottom: 10px;
+            float: right;
+            z-index: 1000;
+            display: block;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+        
+        .canvas__scroll span {
+            color: #fff;
+            font-size: 11px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        
+        .canvas__scroll__link {
+            margin: auto;
+            width: 24px;
+            height: 16px;
+            display: block;
+        }
+        
+        .canvas__scroll__link img {
+            width: 20px;
+            height: 20px;
+        }
+        /* scroll */
+        
+        #scrollPane {
+            max-height: 250px;
+            overflow: scroll;
+        }
+        
+        .prev {
+            cursor: pointer;
+            position: fixed;
+            border-radius: 50%;
+            top: 3px;
+            margin-left: 140px;
+            padding: 2px 5px 5px 5px;
+            z-index: 1;
+            border: 1px solid #fff;
+        }
+        
+        .next {
+            border-radius: 50%;
+            cursor: pointer;
+            position: fixed;
+            top: 203px;
+            margin-left: 140px;
+            border: 1px solid #fff;
+            padding: 2px 5px 5px 5px;
+            z-index: 1;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+
+    <span class="prev"><i style="color: #fff;" class="fa fa-chevron-up"></i></span>
+    <div id="scrollPane">
+        <div class="wrap">
+            <div class="canvas">
+                <div class="bg">
+                    <img src="images/bg.jpg">
+                </div>
+                <div class="content">
+                    <p><b>Bawa tempat minum sendiri yuk !</b></p>
+                    <p>Dapatkan tumblr Kompas.com hanya dengan isi data diri</p>
+                    <p style="color: #7ee0ee; font-size: 0.8em;">*hanya untuk 100 orang beruntung</p>
+                    <form action="#">
+                        <p><b>Mau? Segera isi data diri di bawah ini!</b></p>
+                        <input type="text" id="fname" name="nama" placeholder="Nama">
+                        <input type="text" id="lname" name="email" placeholder="Email">
+                        <input type="text" id="lname" name="alamat" placeholder="Alamat">
+                        <input type="text" id="lname" name="kodepos" placeholder="Kode Pos">
+                        <input type="text" id="lname" name="nohp" placeholder="No HP">
+                        <input type="submit" value="FREE TUMBLR">
+                    </form>
+                    <div class="syarat">
+                        <p><b>* Syarat dan Ketentuan</b></p>
+                        <p>• Hanya untuk Anda yang berdomisili Jabodetabek </p>
+                        <p>• Periode program 10 - 31 Januari 2020</p>
+                        <p>• 100 orang pemenang beruntung akan dihubungi via email satu minggu setelah periode program berakhir</p>
+                        <p>• pemenang ditentukan oleh pihak VCBL dan tidak bisa diganggu gugat.</p>
+                        <p>• Biaya pengiriman akan ditanggung pihak VCBL</p>
+
+                    </div>
+                </div>
+                <!-- <div class="canvas__scroll animate--floatSlow">
+                    <a href="javascript:void(0)" class="canvas__scroll__link">
+                        <img src="images/down.png">
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <span class="next"><i style="color: #fff;" class="fa fa-chevron-down"></i></span>
+
+    <script>
+        $(function() {
+            $(".prev").mouseover(function() {
+                $("#scrollPane").animate({
+                    "scrollTop": 0
+                }, 4000);
+            }).mouseout(function() {
+                $("#scrollPane").stop();
+            });
+            $(".next").mouseover(function() {
+                $("#scrollPane").animate({
+                    "scrollTop": $("#scrollPane .wrap").height()
+                }, 4000);
+            }).mouseout(function() {
+                $("#scrollPane").stop();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

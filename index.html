@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing page</title>
+    <link href="css/flex.css" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #20467d;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        
+        .bg {
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .bg__item {
+            position: relative;
+        }
+        
+        .bg__item--1 img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+        }
+        
+        .title {
+            padding-top: 10%;
+        }
+        
+        .title__item1 {
+            text-align: center;
+        }
+        
+        .form {
+            padding-top: 10%;
+            color: #fff;
+        }
+        
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 10px 20px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 13px;
+            box-sizing: border-box;
+        }
+        
+        input::placeholder {
+            color: #929fb2;
+        }
+        
+        input[type=submit] {
+            width: 250px;
+            background-color: #ff3171;
+            color: black;
+            padding: 5px 20px;
+            border: none;
+            font-size: 1.5em;
+            left: 0;
+            right: 0;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            text-align: center;
+            border-radius: 13px;
+            cursor: pointer;
+            font-family: "Delivery Note DEMO";
+            letter-spacing: 2px;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #ff3171;
+        }
+        
+        .form__syarat {
+            background: #547bb4;
+            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="bg__item">
+            <div class="bg__item--1">
+                <img src="images/item-bg.png">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="box">
+                        <div class="title">
+                            <div class="title__item1">
+                                <img src="images/logo.png">
+                            </div>
+                            <div class="title__item2">
+                                <img src="images/title.png">
+                            </div>
+                            <div class="title__item3">
+                                <img src="images/item1.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="box">
+                        <div class="form">
+                            <p>
+                                Kalo sayang dengan bumi, sekarang saatnya ubah kebiasaan kamu!
+                            </p>
+                            <p>
+                                Yuk mulai bawa tas belanja sendiri, sedotan stainlees, dan juga botol minum kemana saja untuk menggantikan plastik yang selaman ini digunakan.
+                            </p>
+                            <p>
+                                Nah, untuk mendukung kamu, VCBL akan bagi-bagi <span style="color:#56edfe">tumblr Kompas.com untuk 100 orang yang beruntung.</span>
+                            </p>
+                            <p>
+
+                            </p>
+
+                            <form action="#">
+                                <p><b>Mau? Segera isi data diri di bawah ini!</b></p>
+                                <input type="text" id="fname" name="nama" placeholder="Nama">
+                                <input type="text" id="lname" name="email" placeholder="Email">
+                                <input type="text" id="lname" name="alamat" placeholder="Alamat">
+                                <input type="text" id="lname" name="kodepos" placeholder="Kode Pos">
+                                <input type="text" id="lname" name="nohp" placeholder="No HP">
+                                <input type="submit" value="FREE TUMBLR">
+                            </form>
+                            <div class="form__syarat">
+                                <p><b>* Syarat dan Ketentuan</b></p>
+                                <p>• Hanya untuk Anda yang berdomisili Jabodetabek </p>
+                                <p>• Periode program 10 - 31 Januari 2020</p>
+                                <p>• 100 orang pemenang beruntung akan dihubungi via email satu minggu setelah periode program berakhir</p>
+                                <p>• pemenang ditentukan oleh pihak VCBL dan tidak bisa diganggu gugat.</p>
+                                <p>• Biaya pengiriman akan ditanggung pihak VCBL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

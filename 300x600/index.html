@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>300x600</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        @font-face {
+            font-family: "Delivery Note DEMO";
+            src: url(font/Delivery-Note-DEMO.tff);
+        }
+        
+        body {
+            width: 300px;
+            font-size: 13px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow-y: scroll;
+        }
+        /*  */
+        
+        .bg img {
+            width: 100%;
+        }
+        
+        .canvas {
+            background: #20467d;
+            height: 600px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            color: #fff;
+        }
+        
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 6px 20px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 13px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        
+        input::placeholder {
+            color: #929fb2;
+        }
+        
+        input[type=submit] {
+            width: 150px;
+            background-color: #ff3171;
+            color: black;
+            padding: 3px 20px;
+            border: none;
+            font-size: 1.5em;
+            left: 0;
+            right: 0;
+            margin-left: 44px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+            border-radius: 13px;
+            cursor: pointer;
+            font-family: "Delivery Note DEMO";
+            letter-spacing: 2px;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #ff3171;
+        }
+        
+        .content {
+            padding: 15px;
+            margin-top: -30px;
+        }
+        
+        .syarat {
+            background: #547bb4;
+            border-radius: 5px;
+            padding: 0px 10px;
+            color: #fff;
+            height: 55px;
+            overflow-y: scroll;
+        }
+        
+        .syarat::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        .syarat::-webkit-scrollbar-track {
+            box-shadow: inset 15px -1px 5px #f8fbff;
+            border-radius: 10px;
+            margin: 0 50px;
+        }
+        
+        .syarat::-webkit-scrollbar-thumb {
+            background: #56edfe;
+            border-radius: 10px;
+        }
+        
+        .syarat::-webkit-scrollbar-thumb:hover {
+            background: #56edfe;
+            border-right: 4px white solid;
+            background-clip: padding-box;
+        }
+        
+        form p {
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canvas">
+        <div class="bg">
+            <img src="images/bg.jpg">
+        </div>
+        <div class="content">
+            <form action="#">
+                <p><b>Mau? Segera isi data diri di bawah ini!</b></p>
+                <input type="text" id="fname" name="nama" placeholder="Nama">
+                <input type="text" id="lname" name="email" placeholder="Email">
+                <input type="text" id="lname" name="alamat" placeholder="Alamat">
+                <input type="text" id="lname" name="kodepos" placeholder="Kode Pos">
+                <input type="text" id="lname" name="nohp" placeholder="No HP">
+                <input type="submit" value="FREE TUMBLR">
+            </form>
+            <div class="syarat">
+                <p><b>* Syarat dan Ketentuan</b></p>
+                <p>• Hanya untuk Anda yang berdomisili Jabodetabek </p>
+                <p>• Periode program 10 - 31 Januari 2020</p>
+                <p>• 100 orang pemenang beruntung akan dihubungi via email satu minggu setelah periode program berakhir</p>
+                <p>• pemenang ditentukan oleh pihak VCBL dan tidak bisa diganggu gugat.</p>
+                <p>• Biaya pengiriman akan ditanggung pihak VCBL</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
